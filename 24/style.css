@@ -19,7 +19,7 @@ canvas:focus {
 }
 #page_body {
   margin-top: 0.2rem;
-  padding-top: 30px;
+  margin: 0 auto;
 }
 #canvasID {
   display: block;
