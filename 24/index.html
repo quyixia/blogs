@@ -60,7 +60,7 @@
           return navigator.userAgent.match(/BlackBerry/i);
         },
         iOS: function () {
-          return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+          return navigator.userAgent.match(/iPhone|iPod/i);
         },
         iPadOS: function () {
           return navigator.userAgent.match(/iPad/i);
@@ -83,11 +83,7 @@
       };
       function initCanvasWH(canv) {
         var isPhone = isMobile.any();
-        var isPadOS = isMobile.iPadOS();
-        if (isPadOS) {
-          canv.width = 500;
-          canv.height = 500;
-        } else if (isPhone) {
+        if (isPhone) {
           var canvW = parseInt(window.innerWidth * 0.98);
           canv.width = canvW;
           canv.height = canvW;
