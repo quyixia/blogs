@@ -12,14 +12,11 @@ body {
   -webkit-user-select: none;
   -webkit-highlight: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  margin: 0 auto;
 }
 canvas:focus {
   outline: 0;
 }
 #page_body {
-  margin-top: 0.2rem;
-  margin: 0 auto;
 }
 #canvasID {
   display: block;
