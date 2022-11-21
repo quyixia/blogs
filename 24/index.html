@@ -62,6 +62,9 @@
         iOS: function () {
           return navigator.userAgent.match(/iPhone|iPad|iPod/i);
         },
+        iPadOS: function () {
+          return navigator.userAgent.match(/iPad/i);
+        },
         Opera: function () {
           return navigator.userAgent.match(/Opera Mini/i);
         },
@@ -80,7 +83,11 @@
       };
       function initCanvasWH(canv) {
         var isPhone = isMobile.any();
-        if (isPhone) {
+        var isPadOS = isMobile.iPadOS();
+        if (isPadOS) {
+          canv.width = 500;
+          canv.height = 500;
+        } else if (isPhone) {
           var canvW = parseInt(window.innerWidth * 0.98);
           canv.width = canvW;
           canv.height = canvW;
